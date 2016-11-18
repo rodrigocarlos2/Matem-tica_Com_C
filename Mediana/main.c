@@ -48,6 +48,17 @@ void show(int vet[], int tam){
 	
 }
 
+void readVector(int *v, int tam){
+	
+	int i;
+	
+	for(i=0; i<tam; i++){
+		printf("Digite o %d elemento: ", i+1);
+		scanf("%d", &v[i]);
+	}
+	
+}
+
 int main(int argc, char *argv[]) {
 	
 	int *vet, tam;
@@ -58,6 +69,8 @@ int main(int argc, char *argv[]) {
 	
 	if(vet==NULL)
 		exit(1);
+		
+	readVector(vet, tam);
 		
 	ordenarLista(vet, tam);
 	
