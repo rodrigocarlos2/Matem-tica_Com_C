@@ -59,6 +59,28 @@ void readVector(int *v, int tam){
 	
 }
 
+void mediana(int vet[], int tam){
+	
+	if(tam%2==0){
+		
+		int pos1 = tam/2;
+		int pos2 = pos1-1;
+		
+		float result = ((float)vet[pos1]+(float)vet[pos2])/(float)2;
+		
+		printf("Mediana: %.2f\n", result);
+		
+	}
+	else{
+		
+		int pos = tam/2;
+		
+		printf("Mediana: %d\n", vet[pos]);
+		
+	}
+	
+}
+
 int main(int argc, char *argv[]) {
 	
 	int *vet, tam;
@@ -75,6 +97,8 @@ int main(int argc, char *argv[]) {
 	ordenarLista(vet, tam);
 	
 	show(vet, tam);
+	
+	mediana(vet, tam);
 	
 	return 0;
 }
